@@ -1560,6 +1560,83 @@ blockquote {
   text-align: right;
   font-weight: 600; }
 
+.presents {
+  position: relative;
+  margin: 120px 0 29px; }
+  .presents:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    max-width: 1818px;
+    height: 1283px;
+    background: url("../img/bg13.jpg") no-repeat center;
+      background-size: cover; }
+  .presents .callback-director {
+    max-width: 326px; }
+  .presents .wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 0 0 70px; }
+  .presents .description-title {
+    margin: 0 auto 64px; }
+  .presents .director-company__box {
+    bottom: 75px;
+    left: auto;
+    right: 9px;
+    -webkit-transform: none;
+            transform: none; }
+
+.presents-content {
+  width: calc(100% - 326px);
+  padding: 0 0 0 96px; }
+  .presents-content h3 {
+    margin: 0 0 32px;
+    max-width: 390px;
+    font-size: 21px; }
+  .presents-content .box-text {
+    line-height: 1.44; }
+
+.callback-three {
+  margin: 0 0 130px; }
+  .callback-three .wrapper {
+    padding: 48px 48px 44px 76px; }
+  .callback-three .description-title {
+    margin: 0 auto 40px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 14px; }
+  .callback-three .callback-item {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .callback-three form {
+    max-width: 330px;
+    width: 100%; }
+    .callback-three form .checkbox {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      text-align: left; }
+  .callback-three .phone-wrapper {
+    width: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .callback-three .phone {
+    margin: 10px auto 0; }
+  .callback-three h2 {
+    font-size: 24px;
+    margin: 0 auto 15px; }
+
 .articles .box-text {
   margin: 0 auto 58px;
   max-width: 900px;
