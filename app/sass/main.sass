@@ -522,7 +522,7 @@ header
   letter-spacing: 0.72px
   font-size: 72px
   font-weight: 800
-  line-height: .7
+  line-height: .4
 
 .line-wrapper
   width: 100%
@@ -1126,7 +1126,6 @@ header
 .company-slider
   margin: 46px 0 0
 
-
 .company-slider__item
   margin: 0 12px 0 0
   border-radius: 20px
@@ -1135,6 +1134,64 @@ header
   img
     @include img-resize
 
+//reviews
+.reviews
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    bottom: -131px
+    right: 0
+    width: 100%
+    height: 1245px
+    background: url("../img/bg12.jpg") no-repeat center
+      size: cover
+  .slick-next
+    right: -10px
+  .slick-prev
+    left: -10px
+
+.reviews-box
+  width: calc(100% - 30px)
+  margin: 20px auto
+  @include display-stretch
+  box-shadow: 0 4px 21.4px 2.6px rgba(178, 178, 178, 0.23)
+  background-image: linear-gradient(to top, #f2f2f2, #ffffff)
+  border-radius: 30px
+  overflow: hidden
+
+
+.reviews-box__img
+  max-width: 459px
+  img
+    @include img-resize
+
+.reviews-box__content
+  width: calc(100% - 459px)
+  padding: 53px 30px
+
+.project-characteristics
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 16px 0 18px
+  font-size: 18px
+  p
+    font-weight: 800
+    margin: 0 5px 0 0
+
+blockquote
+  margin: 29px 0 0 0
+  padding: 31px 33px 33px 25px
+  border: solid 1px #ffce3b
+  .box-text
+    margin: 0 0 30px
+    font-style: italic
+    font-size: 14px
+
+.author
+  text-align: right
+  font-weight: 600
 
 //articles
 .articles
