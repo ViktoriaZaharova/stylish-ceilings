@@ -1,0 +1,56 @@
+$default-font: "Montserrat", sans-serif
+$font: "muller", sans-serif
+
+// colors	
+$accent: #ffc000
+$menu: #525252	
+$text: #222222
+
+// mixin	
+@mixin display-center
+	display: flex
+	align-items: center
+	justify-content: center	
+	flex-wrap: wrap
+
+@mixin display-between
+	display: flex
+	align-items: center
+	justify-content: space-between	
+	flex-wrap: wrap
+
+@mixin display-start
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+
+@mixin display-stretch
+  display: flex
+  align-items: stretch
+  justify-content: flex-start
+  flex-wrap: wrap
+
+@mixin display-column
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+@mixin img-resize
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+// animate
+@keyframes slideme
+  0%
+    left: -30px
+    margin-left: 0
+
+  30%
+    left: 110%
+    margin-left: 80px
+
+  100%
+    left: 110%
+    margin-left: 80px		
