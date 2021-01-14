@@ -329,62 +329,275 @@
 
 <section class="quiz" id="quiz">
   <div class="container">
-    <div class="quiz-content">
+    <div class="quiz-content w-100">
       <h2>Узнайте цену Вашего Натяжного Потолка и получите
         1 из 4 подарков ответив всего на 6 вопросов</h2>
 
-      <div class="time-line">
-        <div class="lime-line-bg">
-          <span>1</span>
-        </div>
-      </div>
 
-      <div class="quiz-box">
-        <h3>1. Выберите тип полотна</h3>
+      <form method="post" class="form-quiz w-100">
 
-        <div class="row">
-          <div class="col-4">
-            <label class="checkbox">
-              <input class="checkbox-inp" type="radio" name="radio_1" checked value="Матовые">
-              <span class="checkbox-img"><img src="img/img1.jpg" alt=""></span>
-              <span class="checkbox-custom"></span>
-              <span class="label">Матовые</span>
-            </label>
-          </div>
-
-          <div class="col-4">
-            <label class="checkbox">
-              <input class="checkbox-inp" type="radio" name="radio_1" value="Сатиновый">
-              <span class="checkbox-img"><img src="img/img1.jpg" alt=""></span>
-              <span class="checkbox-custom"></span>
-              <span class="label">Сатиновый</span>
-            </label>
-          </div>
-
-          <div class="col-4">
-            <label class="checkbox">
-              <input class="checkbox-inp" type="radio" name="radio_1" checked value="Матовые">
-              <span class="checkbox-img"><img src="img/img1.jpg" alt=""></span>
-              <span class="checkbox-custom"></span>
-              <span class="label">Матовые</span>
-            </label>
-          </div>
-
-          <div class="col-4">
-            <label class="checkbox">
-              <input class="checkbox-inp" type="radio" name="radio_1" checked value="Матовые">
-              <span class="checkbox-img"><img src="img/img1.jpg" alt=""></span>
-              <span class="checkbox-custom"></span>
-              <span class="label">Матовые</span>
-            </label>
+        <div class="timeline progress" role="progressbar" aria-valuemin="0" aria-valuemax="6">
+          <div class="progress-bg">
+            <div class="timeline__val"></div>
           </div>
         </div>
-      </div>
 
-      <a href="#" class="btn btn-accent btn-quiz-next">
-        <span class="btn-blick"></span>
-        СЛЕДУЮЩИЙ ВОПРОС
-      </a>
+        <div class="form form-quiz__content w-100">
+
+          <div class="slide">
+            <div class="quiz-box">
+              <h3>1. Выберите тип полотна</h3>
+
+              <div class="row">
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_1" checked value="Матовые">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Матовые</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_1" value="Сатиновый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Сатиновый</span>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_1" value="Глянцевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Глянцевый</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_1" value="Тканевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Тканевый</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quiz-box">
+              <h3>2. Выберите тип полотна</h3>
+
+              <div class="row">
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_2" checked value="Матовые">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Матовые</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_2" value="Сатиновый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Сатиновый</span>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_2" value="Глянцевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Глянцевый</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_2" value="Тканевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Тканевый</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quiz-box">
+              <h3>3. Выберите тип полотна</h3>
+
+              <div class="row">
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_3" checked value="Матовые">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Матовые</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_3" value="Сатиновый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Сатиновый</span>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_3" value="Глянцевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Глянцевый</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_3" value="Тканевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Тканевый</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quiz-box">
+              <h3>4. Выберите тип полотна</h3>
+
+              <div class="row">
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_4" checked value="Матовые">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Матовые</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_4" value="Сатиновый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Сатиновый</span>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_4" value="Глянцевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Глянцевый</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_4" value="Тканевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Тканевый</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quiz-box">
+              <h3>5. Выберите тип полотна</h3>
+
+              <div class="row">
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_5" checked value="Матовые">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Матовые</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_5" value="Сатиновый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Сатиновый</span>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_5" value="Глянцевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Глянцевый</span>
+                  </label>
+                </div>
+
+                <div class="col-4">
+                  <label class="radio">
+                    <input class="radio-inp" type="radio" name="radio_5" value="Тканевый">
+                    <span class="radio-img"><img src="img/img1.jpg" alt=""></span>
+                    <span class="radio-custom"></span>
+                    <span class="label">Тканевый</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quiz-box quiz-box-result">
+              <ul class="list-message-callback">
+                <li>
+                  <a href="whatsapp://send?phone=+79253840560">
+                    <span>WhatsApp</span>
+                    <img src="img/whatsapp2.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="tg://resolve?domain=nikname">
+                    <span>Telegram</span>
+                    <img src="img/telegram.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="viber://add?number=79253840560">
+                    <span>Viber</span>
+                    <img src="img/viber2.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+
+              <label><input type="text" placeholder="Ваш телефон" required name="phone"></label>
+              <button type="submit" class="btn btn-accent">
+                <span class="btn-blick"></span>
+                отправить
+              </button>
+              <label class="checkbox">
+                <input class="checkbox-inp" type="checkbox" name="checkbox" checked>
+                <span class="checkbox-custom"></span>
+                <span class="label">Я согласен с Политикой конфиденциальности</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="form-quiz__nav"></div>
     </div>
   </div>
 </section>

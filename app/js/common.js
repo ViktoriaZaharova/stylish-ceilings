@@ -116,6 +116,44 @@ $('.reviews-slider').slick({
 	fade: true
 });
 
+$('.form-quiz__content').slick({
+	slidesToShow: 1,
+	nextArrow: '<button type="button" class="slick-next btn btn-accent"><span class="btn-blick"></span>\n' +
+		'        СЛЕДУЮЩИЙ ВОПРОС</button>',
+	prevArrow: '<button type="button" class="slick-prev btn btn-accent"><span class="btn-blick"></span>\n' +
+		'        предыдущий ВОПРОС</button>',
+	appendArrows: '.form-quiz__nav',
+	infinite: false,
+	fade: true
+});
+
+function setProgress(index) {
+	const calc = ((index) / ($slider.slick('getSlick').slideCount)) * 100;
+
+	$progressBar
+		.css('width', calc + '%')
+		.attr('aria-valuenow', calc);
+
+	$progressBarLabel.text(`${calc.toFixed()}`);
+}
+
+const $slider = $('.form-quiz__content');
+const $progressBar = $('.progress-bg');
+const $progressBarLabel = $('.timeline__val');
+
+$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+	setProgress(nextSlide);
+});
+
+
+setProgress(0);
+
+$(".form-quiz__content").on("afterChange", function (event) {
+	if ($(this).find('.slick-slide').last().hasClass('slick-active')) {
+		$('.form-quiz__nav').hide();
+	}
+});
+
 // twentytwenty
 $(function(){
 	$(".twentytwenty-container").twentytwenty();
@@ -177,3 +215,38 @@ $('.btn-load').on('click', function (e) {
 	}
 });
 
+
+// mail ajax
+$(".form").submit(function () {
+
+	$.ajax({
+		type: "POST",
+		url: "mail.php",
+		data: $(this).serialize(),
+		async: true,
+		success: function (data) {
+			$(this).find("input").val("");
+
+			$('.modal__div').css('display', 'none').animate({
+				opacity: 0,
+				top: '45%'
+			});
+
+			$('#thanks__modal').css('display', 'flex')
+				.animate({
+					opacity: 1,
+					top: '50%'
+				}, 200);
+
+			setTimeout(function () {
+				$("#thanks__modal").css('display', 'none').animate({
+					opacity: 0,
+					top: '45%'
+				});
+				$('.overlay').fadeOut(400);
+			}, 1000);
+			$(".form").trigger("reset");
+		}
+	});
+	return false;
+});
