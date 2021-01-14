@@ -174,7 +174,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
 $('[name="phone"]').mask('+7(999) 999-99-99');
 
 // animate scroll id block
-$('.go_to').on("clisk", function () {
+$('.go_to').on("click", function () {
 	var scroll_el = $(this).attr('href');
 	if ($(scroll_el).length != 0) {
 		$('html, body').animate({
@@ -256,7 +256,7 @@ $(".form-2").submit(function () {
 
 	$.ajax({
 		type: "POST",
-		url: "mail.php",
+		url: "mail-form.php",
 		data: $(this).serialize(),
 		async: true,
 		success: function (data) {
@@ -316,3 +316,45 @@ $(".form-quiz").submit(function () {
 	});
 	return false;
 });
+
+// модальные окна (несколько)
+$(function () {
+	var overlay = $('.overlay');
+	var open_modal = $('.open_modal');
+	var close = $('.modal__close, .overlay');
+	var modal = $('.modal__div');
+
+	open_modal.on('click',function (event) {
+		event.preventDefault();
+
+		modal.css('display', 'none').animate({
+			opacity: 0,
+			top: '45%'
+		}, 200);
+
+		var div = $(this).attr('href');
+		overlay.fadeIn(400,
+			function () {
+				$(div)
+					.css('display', 'flex')
+					.animate({
+						opacity: 1,
+						top: '50%'
+					}, 200);
+			});
+	});
+
+	close.on('click', function () {
+		modal
+			.animate({
+					opacity: 0,
+					top: '45%'
+				}, 200,
+				function () {
+					$(this).css('display', 'none');
+					overlay.fadeOut(400);
+				}
+			);
+	});
+});
+//end

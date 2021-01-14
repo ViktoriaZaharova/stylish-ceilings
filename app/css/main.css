@@ -2098,6 +2098,94 @@ footer {
   .quiz-box-result .list-message-callback li {
     width: 33%; }
 
+.modal__div {
+  position: fixed;
+  width: 100%;
+  max-width: 790px;
+  height: 100%;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 101;
+  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+  opacity: 0;
+  padding: 0 20px; }
+  .modal__div h2 {
+    font-size: 24px;
+    margin: 0 auto 16px; }
+  .modal__div .description-title {
+    font-size: 14px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto 40px; }
+
+.modal__wrapper {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 50px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  padding: 50px 75px;
+  background: #fff;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 24px 1px rgba(99, 99, 99, 0.1);
+          box-shadow: 0 0 24px 1px rgba(99, 99, 99, 0.1); }
+  .modal__wrapper .phone-wrapper {
+    width: 100%;
+    margin: 27px auto 0; }
+  .modal__wrapper .phone {
+    margin: 0; }
+
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .modal-body .similarly {
+    margin: 0; }
+
+.overlay {
+  z-index: 100;
+  position: fixed;
+  background-color: #fff;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; }
+
+#thanks__modal h2 {
+  max-width: 210px; }
+
+#thanks__modal .description-title {
+  max-width: 320px;
+  margin: 0 auto; }
+
 @keyframes slideme {
   0% {
     left: -30px;

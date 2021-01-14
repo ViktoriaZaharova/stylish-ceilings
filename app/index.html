@@ -1728,7 +1728,7 @@
           <label><input type="text" placeholder="Ваш телефон" required name="phone"></label>
           <button type="submit" class="btn btn-accent">
             <span class="btn-blick"></span>
-            ОСТАВИТЬ ЗАЯВКУНА ЗВОНОК
+            ОСТАВИТЬ ЗАЯВКУ НА ЗВОНОК
           </button>
           <label class="checkbox">
             <input class="checkbox-inp" type="checkbox" name="checkbox" checked>
@@ -2054,6 +2054,81 @@
   </a>
 </div>
 <!--widget-->
+
+<div class="modal__div" id="thanks__modal">
+  <div class="modal__wrapper">
+    <span class="modal__close"></span>
+    <h2>Спасибо
+      за Вашу заявку!</h2>
+    <div class="description-title">Мы перезвоним в течении 5 минут
+      и проконсультируем Вас по всем вопросам
+    </div>
+  </div>
+</div>
+
+<div class="modal__div" id="modal-callback">
+  <div class="modal__wrapper">
+    <span class="modal__close"></span>
+    <h2>Оставьте заявку</h2>
+
+    <div class="description-title">
+      Заполните форму - мы перезвоним в течении 5 минут
+      и проконсультируем Вас по всем вопросам
+    </div>
+
+    <div class="modal-body">
+      <form method="post" class="form form-2">
+        <label><input type="text" placeholder="Ваш телефон" required name="phone"></label>
+        <button type="submit" class="btn btn-accent">
+          <span class="btn-blick"></span>
+          ОСТАВИТЬ ЗАЯВКУ НА ЗВОНОК
+        </button>
+        <label class="checkbox">
+          <input class="checkbox-inp" type="checkbox" name="checkbox" checked>
+          <span class="checkbox-custom"></span>
+          <span class="label">Я согласен с Политикой конфиденциальности</span>
+        </label>
+
+      </form>
+
+      <div class="similarly">
+        <h4>Также Вы можете написать:</h4>
+
+        <ul class="list-message-callback">
+          <li>
+            <a href="whatsapp://send?phone=+79253840560">
+              <span>WhatsApp</span>
+              <img src="img/whatsapp2.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="tg://resolve?domain=nikname">
+              <span>Telegram</span>
+              <img src="img/telegram.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="viber://add?number=79253840560">
+              <span>Viber</span>
+              <img src="img/viber2.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="phone-wrapper">
+        <p>или позвонить нам напрямую</p>
+        <a href="tel:+79253840560" class="phone">
+          <span>+7 (925) 384-05-60</span>
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<!-- Пoдлoжкa -->
+<div class="overlay"></div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
