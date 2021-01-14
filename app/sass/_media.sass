@@ -15,12 +15,20 @@
 
   .callback-director
     max-width: 300px
+    margin: 0
 
   .callback-img
     max-width: 200px
 
   .callback-item
-    width: calc(100% - 450px)
+    width: calc(100% - 500px)
+
+  .slider-nav
+    .slick-prev
+      left: 10px
+    .slick-next
+      right: 10px
+
 
 @media only screen and (max-width: 992px)
   .phone
@@ -79,7 +87,14 @@
     .col-4
       margin: 0 0 40px
 
+  .col-3
+    width: 50%
 
+  .articles-box
+    margin: 0 0 20px
+
+  .articles .box-text
+    margin: 0 auto 30px
 
   .director-company
     max-width: 333px
@@ -105,6 +120,37 @@
   .phone-wrapper .phone
     font-size: 30px
 
+  .callback-two .wrapper
+    padding: 30px 20px 0
+    .callback-two .callback-director
+      max-width: 276px
+
+  .company-content__number
+    max-width: 450px
+
+  .company-content
+    width: calc(100% - 450px)
+
+  .company-slider
+    .slick-next
+      right: 10px
+    .slick-prev
+      left: 10px
+
+  .presents .callback-director
+    max-width: 280px
+
+  .presents .wrapper
+    padding: 0
+
+  .presents-content
+    width: calc(100% - 280px)
+    padding: 0 0 0 40px
+
+  .callback-three .wrapper
+    padding: 0
+    border-radius: 0
+    box-shadow: none
 
 @media only screen and (max-width: 860px)
   .main-slider__content h2
@@ -137,6 +183,63 @@
 
   .quiz-content
     padding: 30px
+
+  .callback-item
+    width: 100%
+    order: -1
+    padding: 0
+    margin: 0 auto 30px
+
+  .description-title
+    margin: 0 auto 30px
+
+  .list-error .check-icon, .list-checkbox-green .check-icon
+    padding: 8px
+
+  .services-img
+    max-width: 358px
+
+  .services-content
+    width: calc(100% - 358px)
+
+  .callback-two .callback-director
+    max-width: 276px
+    margin: 0 auto
+    img
+      max-width: 186px
+      margin: 0 auto
+
+  .callback-two .callback-item
+    order: 0
+    width: 100%
+    margin: 32px 0  29px
+    justify-content: space-around
+
+  .company-content__number
+    margin: 0 auto 30px
+    order: -1
+
+  .number-company
+    margin: 0 0 30px
+
+  .company-content
+    padding: 0
+    width: 100%
+    font-size: 14px
+
+  .reviews-box__img
+    width: 350px
+
+  .reviews-box__content
+    width: calc(100% - 350px)
+
+  .callback-three .phone-wrapper
+    width: 100%
+    margin: 30px auto 0
+
+  .callback-three .callback-item
+    flex-wrap: wrap
+    margin: 0
 
 @media only screen and (max-width: 768px)
   .header-box-time
@@ -308,6 +411,198 @@
     height: 41px
     padding: 12px
 
+  .twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after
+    width: 5px
+    margin-left: -3px
+
+  .twentytwenty-handle
+    border-width: 3px
+    width: 30px
+    height: 30px
+
+  .twentytwenty-left-arrow, .twentytwenty-right-arrow
+    width: 6px
+    height: 9px
+
+  .twentytwenty-right-arrow
+    margin-right: -8px
+
+  .twentytwenty-left-arrow
+    margin-left: -8px
+
+  .twentytwenty-horizontal .twentytwenty-handle:before
+    margin-bottom: 15px
+
+  .twentytwenty-horizontal .twentytwenty-handle:after
+    margin-top: 15px
+
+  .twentytwenty-left-arrow, .twentytwenty-right-arrow
+    margin-top: -4px
+
+  .mistakes
+    padding: 50px 0
+
+  .list-checkbox-green, .list-error
+    width: 100%
+    font-size: 14px
+    .check-icon
+      width: 29px
+      min-width: 29px
+      height: 29px
+      margin: 0 15px 0 0
+    li
+      align-items: flex-start
+
+  .list-error
+    order: -1
+    margin: 0 0 30px
+
+  .section-video .description-title
+    margin: 0 auto 32px
+
+  .video-box
+    height: 400px
+
+  .services
+    padding: 50px 0
+
+  .services-content
+    width: 100%
+    font-size: 14px
+    padding: 0
+    h3
+      display: none
+    .btn
+      margin: 20px auto 0
+
+  .services-box__title
+    display: block
+    width: 100%
+    text-align: center
+    margin: 0 auto 21px
+    font-size: 16px
+    font-weight: bold
+
+  .services-img
+    order: -1
+    height: 230px
+    max-width: 376px
+    width: 100%
+    margin: 0 auto 28px
+
+  .services-box
+    margin: 0 0 34px
+    &:last-child
+      margin: 0
+    &:nth-child(even)
+      .services-content
+        padding: 0
+
+  .reviews-box
+    flex-direction: column
+    align-items: center
+    box-shadow: 0px 4px 21.4px 2.6px rgba(178, 178, 178, 0.23)
+    background-image: linear-gradient(to top, #f2f2f2, #ffffff)
+    border-radius: 0
+    margin: 0 auto
+    width: 100%
+    padding: 0 15px
+
+  .reviews-box__content
+    width: 100%
+    padding: 30px 0 35px
+    .box-text
+      font-size: 14px
+
+  blockquote .box-text
+    margin: 0 0 15px
+
+  .reviews-box__img
+    height: 280px
+    width: 100%
+    max-width: none
+
+  .reviews-slider
+    .slick-prev
+      left: 25px
+    .slick-next
+      right: 25px
+    .slick-arrow
+      top: 120px
+      transform: none
+    h3
+      font-size: 21px
+
+  .project-characteristics
+    font-size: 16px
+    margin: 15px 0 20px
+
+  .reviews
+    .container
+      padding: 0
+    h2, .description-title
+      padding: 0 15px
+
+  .presents
+    margin: 50px 0 60px
+    .description-title
+      margin: 0 auto 32px
+
+    .callback-director
+      max-width: 264px
+      margin: 0 auto
+      img
+        max-width: 223px
+        margin: 0 auto
+    .director-company__box
+      bottom: -10px
+      right: auto
+      left: 50%
+      transform: translate(-50%,0)
+
+  .presents-content
+    width: 100%
+    padding: 0
+    margin: 40px auto 0
+    font-size: 14px
+    h3
+      margin: 0 auto 22px
+      font-size: 18px
+      max-width: 340px
+
+  .contacts
+    padding: 21px 0 292px
+
+  .contacts-box
+    padding: 50px 16px 47px
+    h2
+      text-align: center
+    .btn
+      margin: 0 auto
+
+  .modal__wrapper
+    padding: 50px 15px
+    .phone-wrapper .phone
+      font-size: 24px
+
+  .modal__div
+    padding: 0 15px
+    max-width: 395px
+
+
+@media only screen and (max-width: 650px)
+  .modal-body
+    flex-direction: column
+    align-items: center
+    .similarly
+      margin: 40px auto 0
+
+  .modal__div .description-title
+    margin: 0 auto 27px
+    max-width: 290px
+
+
+
 @media only screen and (max-width: 575px)
   .col-4
     width: 100%
@@ -361,16 +656,178 @@
   .catalog:before, .quiz:before, .advantages:before, .callback:before, .mistakes:before, .section-video:before, .callback:before, .callback:after, .company:before, .reviews:before, .presents:before, .callback-two:before, .seo-content:before
     display: none
 
+  .callback-img
+    max-width: 152px
+
+  .callback-director
+    max-width: 212px
+
+  .callback-director
+    img
+      max-width: 192px
+      margin: 0 auto
+
+  .callback
+    .wrapper
+      justify-content: space-around
+
+  .director-company__box h3
+    font-size: 16px
+
+  .video-box
+    height: 195px
+
+  .callback-two .callback-item
+    flex-direction: column
+    align-items: center
+
+  .callback-two .similarly
+    margin: 28px auto 0
+
+  .callback-two .phone-wrapper
+    align-items: center
+
+  .callback-two
+    .container
+      padding: 0
+    .wrapper
+      border-radius: 0
+      padding: 30px 15px 0
+
+  .company-slider__item
+    margin: 0 auto
+
+  .company-slider
+    margin: 30px 0 0
+
+  .company
+    margin: 0 0 50px
+
+  .callback-three .wrapper
+    padding: 0
+
+  .callback-three
+    margin: 0 0 60px
+    .description-title
+      margin: 0 auto 34px
+
+  .col-3
+    width: 100%
+
+  .articles
+    .btn
+      margin: 12px auto 0
+
+  .seo-content
+    padding: 60px 0
+    .box-text
+      height: 779px
+      font-size: 14px
+    .box-open
+      height: auto
+
+  .btn-toggle
+    margin: 30px auto 0
+
+  .footer-box
+    width: 100%
+    margin: 0 auto 30px
+    text-align: center
+    order: -2
+
+  footer
+    .logo
+      margin: 0 auto
+      max-width: 120px
+    .list-social
+      justify-content: center
+      margin: 30px 0 20px
+
+
+  .links-politic
+    display: none
+
+  .footer-menu-last
+    order: -2
+
+  .footer-menu-center
+    order: -1
+
+  .d-mobile
+    display: block
+    text-align: center
+    margin: 0 auto
+    font-size: 12px
+    width: 100%
+
+  .copyright
+    margin: 20px auto 0
+    font-size: 12px
+
+  .d-desktop
+    display: none
+
+  .footer-bottom
+    padding: 20px 0
+    font-size: 24px
+
+  .hero-widget
+    right: auto
+    left: 50%
+    transform: translate(-50%,0)
+    top: auto
+    bottom: 10px
+    flex-direction: row
+    align-items: center
+    display: flex
+    justify-content: center
+    &__btn
+      margin: 0 15px 0 0
+      img
+        max-height: 100%
+      &:last-child
+        margin: 0
+      &:hover
+        .hero-widget__btn-text
+          display: none
+
 @media only screen and (max-width: 440px)
   .quiz-box-result .list-message-callback li
     width: 100%
+
+  .footer-menu
+    li
+      a
+        font-size: 12px
 
 @media only screen and (max-width: 400px)
   header
     .schedule, .address
       font-size: 9px
 
+  .callback-img
+    max-width: 100px
 
+  .callback-director
+    max-width: 200px
+    img
+      max-width: 150px
+
+  .callback
+    padding: 0 0 60px
+
+  .contacts-box
+    .phone
+      font-size: 14px
+    .schedule
+      margin: 0
+      font-size: 14px
+    .address
+      margin: 25px 0
+
+  .mail
+    margin: 25px 0
+    font-size: 14px
 
 
 @media only screen and (max-width: 360px)
@@ -387,4 +844,31 @@
 
   .phone
     font-size: 16px
+    
+  .checkbox
+    text-align: left
+    font-size: 11px
+
+  .phone-wrapper .phone
+    font-size: 24px
+
+  .callback-img
+    max-width: 80px
+
+  .director-company__box
+    font-size: 12px
+    h3
+      font-size: 14px
+
+  .callback-director
+    max-width: 160px
+    img
+      max-width: 120px
+
+  .number-company
+    font-size: 12px
+    .num
+      font-size: 50px
+
+
 

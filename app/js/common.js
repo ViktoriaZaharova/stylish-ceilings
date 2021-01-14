@@ -64,7 +64,15 @@ $('.gallery-slider').slick({
 	dots: true,
 	draggable: false,
 	appendArrows: '.gallery-slider__nav',
-	fade: true
+	fade: true,
+	responsive: [
+		{
+			breakpoint: 575,
+			settings: {
+				arrows: false,
+			}
+		}
+	]
 });
 
 $('.company-slider').slick({
@@ -89,6 +97,20 @@ $('.company-slider').slick({
 		'\t</g>\n' +
 		'</g>\n' +
 		'</svg>\n</button>',
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2
+			}
+		},
+		{
+			breakpoint: 575,
+			settings: {
+				slidesToShow: 1
+			}
+		}
+	]
 });
 
 $('.reviews-slider').slick({
@@ -214,7 +236,7 @@ $('.btn-toggle').on('click', function(e){
 	} else {
 		$this.removeClass('trigger');
 
-		content.slice(3).slideUp();
+		content.removeClass('box-open');
 	}
 });
 
@@ -382,3 +404,20 @@ $(function () {
 	});
 });
 //end
+
+// клик вне модального окна
+$(document).on('click', function (e) {
+	var div = $(".modal__wrapper");
+	var btn = $('.open_modal');
+	if (!div.is(e.target) && !btn.is(e.target) && btn.has(e.target).length === 0 && div.has(e.target).length === 0) { // и не по его дочерним элементам
+		$('.modal__div').animate({
+				opacity: 0,
+				top: '45%'
+			}, 200,
+			function () {
+				$(this).css('display', 'none');
+				$('.overlay').fadeOut(400);
+			}
+		);
+	}
+});
