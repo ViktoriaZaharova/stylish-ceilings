@@ -128,13 +128,12 @@ $('.form-quiz__content').slick({
 });
 
 function setProgress(index) {
-	const calc = ((index) / ($slider.slick('getSlick').slideCount)) * 100;
+	const calc = ((index + 1) / ($slider.slick('getSlick').slideCount)) * 100;
 
 	$progressBar
 		.css('width', calc + '%')
 		.attr('aria-valuenow', calc);
 
-	$progressBarLabel.text(`${calc.toFixed()}`);
 }
 
 const $slider = $('.form-quiz__content');
@@ -143,6 +142,12 @@ const $progressBarLabel = $('.timeline__val');
 
 $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 	setProgress(nextSlide);
+	// $progressBarLabel.text(currentSlide + 1);
+
+});
+
+$slider.on('afterChange', function(event, slick, currentSlide){
+	$progressBarLabel.text(currentSlide<10?`${currentSlide+1}`:currentSlide+1);
 });
 
 
