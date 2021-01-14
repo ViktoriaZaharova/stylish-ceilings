@@ -535,11 +535,27 @@ h1 {
   background-color: #fcfcfc;
   max-width: 360px;
   width: 100%;
-  padding: 29px 25px; }
+  padding: 29px 15px; }
   .main-slider__form h3 {
     text-align: center;
     font-size: 24px;
     font-weight: 800; }
+  .main-slider__form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .main-slider__form form label {
+      max-width: 310px;
+      width: 100%; }
+    .main-slider__form form .checkbox {
+      max-width: none; }
 
 .description-form {
   text-align: center;
@@ -586,7 +602,9 @@ h1 {
   width: 100%;
   color: #bcbcbc;
   font-size: 12px;
-  font-weight: 500; }
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  max-width: none; }
 
 .checkbox-inp {
   display: none; }
@@ -1934,7 +1952,6 @@ footer {
   position: absolute;
   left: 0;
   height: 100%;
-  width: 0;
   border-radius: 20px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ffc600), to(#ffa801));
   background-image: linear-gradient(to top, #ffc600, #ffa801);

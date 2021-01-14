@@ -384,11 +384,18 @@ h1
   background-color: #fcfcfc
   max-width: 360px
   width: 100%
-  padding: 29px 25px
+  padding: 29px 15px
   h3
     text-align: center
     font-size: 24px
     font-weight: 800
+  form
+    @include display-column-center
+    label
+      max-width: 310px
+      width: 100%
+    .checkbox
+      max-width: none
 
 .description-form
   text-align: center
@@ -424,7 +431,8 @@ h1
   color: #bcbcbc
   font-size: 12px
   font-weight: 500
-
+  font-family: $default-font
+  max-width: none
 
 .checkbox-inp
   display: none
@@ -1522,7 +1530,6 @@ footer
   position: absolute
   left: 0
   height: 100%
-  width: 0
   border-radius: 20px
   background-image: linear-gradient(to top, #ffc600, #ffa801)
   @include display-center

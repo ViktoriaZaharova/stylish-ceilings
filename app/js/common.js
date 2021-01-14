@@ -217,7 +217,7 @@ $('.btn-load').on('click', function (e) {
 
 
 // mail ajax
-$(".form").submit(function () {
+$(".form-1").submit(function () {
 
 	$.ajax({
 		type: "POST",
@@ -227,16 +227,17 @@ $(".form").submit(function () {
 		success: function (data) {
 			$(this).find("input").val("");
 
-			$('.modal__div').css('display', 'none').animate({
-				opacity: 0,
-				top: '45%'
-			});
 
 			$('#thanks__modal').css('display', 'flex')
 				.animate({
 					opacity: 1,
 					top: '50%'
 				}, 200);
+
+			setTimeout(() => {
+				window.location = '../document.pdf';
+			}, 1000);
+
 
 			setTimeout(function () {
 				$("#thanks__modal").css('display', 'none').animate({
@@ -246,6 +247,71 @@ $(".form").submit(function () {
 				$('.overlay').fadeOut(400);
 			}, 1000);
 			$(".form").trigger("reset");
+		}
+	});
+	return false;
+});
+
+$(".form-2").submit(function () {
+
+	$.ajax({
+		type: "POST",
+		url: "mail.php",
+		data: $(this).serialize(),
+		async: true,
+		success: function (data) {
+			$(this).find("input").val("");
+
+
+			$('#thanks__modal').css('display', 'flex')
+				.animate({
+					opacity: 1,
+					top: '50%'
+				}, 200);
+
+
+			setTimeout(function () {
+				$("#thanks__modal").css('display', 'none').animate({
+					opacity: 0,
+					top: '45%'
+				});
+				$('.overlay').fadeOut(400);
+			}, 1000);
+			$(".form").trigger("reset");
+		}
+	});
+	return false;
+});
+
+$(".form-quiz").submit(function () {
+
+	$.ajax({
+		type: "POST",
+		url: "mail-quiz.php",
+		data: $(this).serialize(),
+		async: true,
+		success: function (data) {
+			$(this).find("input").val("");
+
+			$('#thanks__modal').css('display', 'flex')
+				.animate({
+					opacity: 1,
+					top: '50%'
+				}, 200);
+
+			setTimeout(() => {
+				window.location = '../document.zip';
+			}, 1000);
+
+			setTimeout(function () {
+				$("#thanks__modal").css('display', 'none').animate({
+					opacity: 0,
+					top: '45%'
+				});
+				$('.overlay').fadeOut(400);
+			}, 1000);
+
+			$(".form-quiz").trigger("reset");
 		}
 	});
 	return false;
