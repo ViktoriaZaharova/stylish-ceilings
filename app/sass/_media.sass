@@ -1,55 +1,390 @@
 @import "vars"
 
 /*==========  Desktop First  ==========*/
+@media only screen and (max-width: 1200px)
+  header .btn
+    max-width: 250px
+    font-size: 12px
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+  .appeal
+    max-width: 475px
+
+  .director-company
+    max-width: 450px
+    margin: 0
+
+  .callback-director
+    max-width: 300px
+
+  .callback-img
+    max-width: 200px
+
+  .callback-item
+    width: calc(100% - 450px)
+
+@media only screen and (max-width: 992px)
+  .phone
+    font-size: 18px
+
+  .address .svg-icon, .schedule .svg-icon, .phone .svg-icon, .mail .svg-icon
+    width: 15px
+    min-width: 15px
+    height: 15px
+    margin: 0 11px 0 0
+
+  .address, .schedule
+    font-size: 14px
+
+  header
+    .address, .schedule
+      font-size: 12px
+    .btn
+      height: 45px
+      max-width: 180px
+      font-size: 10px
+
+  .schedule
+    margin: 5px 0 0
+
+  h1, h2
+    font-size: 24px
+
+  .list-message
+    margin: 4px 0 0
+
+    li
+      margin: 0 7px 0 0
+
+      a
+        width: 20px
+        height: 20px
+
+  .logo
+    max-width: 100px
+
+  .menu li a
+    padding: 0
+
+  .body-wrapper
+    padding: 105px 0 0
+
+  .main-slider__content h2
+    font-size: 26px
+    max-width: 450px
+
+  .col-4
+    width: 50%
+
+  .advantages
+    .col-4
+      margin: 0 0 40px
 
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+
+  .director-company
+    max-width: 333px
+
+  .director-company__box
+    bottom: -60px
+    max-width: 3210px
+    padding: 26px 0
+    border-radius: 28px
+
+  .tabs__caption
+    justify-content: space-around
+    li
+      margin: 0 0 10px
+      padding: 0 20px
+
+  .product-slider-box__img
+    width: 350px
+
+  .product-slider-box__content
+    width: calc(100% - 350px)
+
+  .phone-wrapper .phone
+    font-size: 30px
 
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
+@media only screen and (max-width: 860px)
+  .main-slider__content h2
+    font-size: 20px
+    max-width: 370px
+
+  .appeal
+    max-width: none
+    margin: 80px auto 0
+    font-size: 14px
+    padding: 37px 35px 60px 25px
+    h4
+      font-size: 16px
+
+  .director-company
+    margin: 0 auto
+
+  .description-title
+    font-size: 14px
+
+  .check-icon
+    padding: 5px
+    width: 31px
+    height: 31px
+    min-width: 31px
+
+  .list-checkbox
+    li
+      margin: 0 0 16px
+
+  .quiz-content
+    padding: 30px
+
+@media only screen and (max-width: 768px)
+  .header-box-time
+    width: 100%
+    order: -1
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: 9px 0
+    color: #fff
+    position: relative
+    margin: 0 0 10px
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translate(-50%,0)
+      background: $accent
+      height: 100%
+      width: calc(100% + 50px)
+    >*
+      position: relative
+    .svg-icon
+      fill: #fff
+      width: 8px
+      height: 12px
+      margin: 0 5px 0 0
+
+  .header-top
+    padding: 0 0 8px
+
+  .header-bottom
+    display: none
+
+  .btn-burger
+    display: block
+
+  header
+    .container
+      padding: 0 10px
+    .btn
+      display: none
+    .schedule
+      margin: 0 0 0 9px
+      font-weight: 500
+      font-size: 11px
+      font-family: $font
+    .phone
+      color: $text
+    .address
+      font-size: 10px
+
+  .body-wrapper
+    padding: 93px 0 0
+
+  .main-slider
+    padding: 30px 0 108px
+    .slick-dots
+      bottom: 30px
+      justify-content: center
+      align-items: center
+    .btn-calc
+      display: flex
+      margin: 28px auto 31px
+
+  .advantages
+    margin: 70px auto 0
+
+  .about
+    margin: 20px 0 60px
+
+  .main-slider__content
+    flex-direction: column
+    align-items: center
+    h2
+      margin: 0 auto
+      max-width: 330px
+      font-size: 14px
+      text-align: center
+      letter-spacing: 0.35px
+      br
+        display: none
+
+  h1
+    margin: 0 auto 30px
+    letter-spacing: .6px
+
+  .quiz-content
+    padding: 60px 11px 36px
+    border-radius: 0
+
+  .quiz
+    .container
+      padding: 0
+
+  .timeline
+    margin: 24px 0 30px
+
+  .quiz-box
+    h3
+      text-align: center
+
+  .form-quiz__nav
+    flex-direction: column
+    align-items: center
+    .slick-prev
+      margin: 0 auto 15px
+
+  .best-offers__content
+    padding: 0
+    width: 100%
+    margin: 31px auto 34px
+    font-size: 14px
+    h3
+      font-size: 24px
+      text-align: center
+      margin: 0 auto 22px
+
+  .best-offers__gift
+    margin: 0 auto 94px
+    padding: 60px 33px
+    h3
+      font-size: 21px
+
+  .best-offers__slider .slick-dots
+    justify-content: center
+    bottom: 60px
+
+  .product-slider-box
+    flex-direction: column
+    align-items: center
+    margin: 0
+    border-radius: 0
+    width: 100%
+
+  .product-slider-box__content
+    width: 100%
+    padding: 30px 15px 55px
+    background: transparent
+    .btn
+      margin: 0 auto
+
+  .product-slider-box__img
+    width: 100%
+    height: 280px
+
+  .tabs__caption
+    display: none
+
+  .select-label
+    display: block
+
+  .tabs
+    background-image: linear-gradient(to top, #f2f2f2, #ffffff)
+
+  .product-slider
+    .slick-prev
+      left: 10px
+    .slick-arrow
+      top: 112px
+      transform: none
+    .slick-next
+      right: 10px
+
+  .slick-arrow
+    width: 41px
+    height: 41px
+    padding: 12px
+
+@media only screen and (max-width: 575px)
+  .col-4
+    width: 100%
+
+  .advantages .col-4
+    margin: 0
+
+  .row
+    align-items: flex-start
+
+  .advantages-box
+    margin: 0 0 50px
+
+  .appeal
+    h3
+      max-width: none
+      order: 1
+    .quote
+      margin: 0 0 -10px auto
+
+  .quote
+    font-size: 50px
+
+  .quiz
+    margin: 0 0 60px
+
+  .best-offers
+    h2
+      margin: 0 auto 27px
+    .description-title
+      margin: 0 0 29px
+
+  .product-slider-box__content
+    h3
+      display: none
+    .list-checkbox
+      font-size: 14px
+
+  .price-wrapper
+    font-size: 16px
+
+  .catalog
+    .container
+      padding: 0
+    .description-title, h2
+      padding: 0 15px
+
+  .tabs
+    padding: 20px 15px 0
+
+  .catalog:before, .quiz:before, .advantages:before, .callback:before, .mistakes:before, .section-video:before, .callback:before, .callback:after, .company:before, .reviews:before, .presents:before, .callback-two:before, .seo-content:before
+    display: none
+
+@media only screen and (max-width: 440px)
+  .quiz-box-result .list-message-callback li
+    width: 100%
+
+@media only screen and (max-width: 400px)
+  header
+    .schedule, .address
+      font-size: 9px
 
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
 
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width: 360px)
+  .header-top .header-box
+    flex-direction: column
+    align-items: flex-start
 
+  header
+    .schedule
+      margin: 5px 0 0
 
-/*==========  Mobile First  ==========*/
+  .logo
+    max-width: 80px
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
+  .phone
+    font-size: 16px
 

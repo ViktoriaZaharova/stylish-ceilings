@@ -244,6 +244,11 @@ button
 
 // header
 header
+  //position: fixed
+  //left: 0
+  //top: 0
+  width: 100%
+  z-index: 3
   background: #fff
   .container
     align-items: center
@@ -343,6 +348,12 @@ header
 .slick-slide
   outline: none
 
+//body-wrapper
+.body-wrapper
+  position: relative
+  padding: 131px 0 0
+
+
 //main-slider
 .main-slider
   background: url("../img/slide1.jpg") no-repeat center top
@@ -354,6 +365,9 @@ header
     transform: translate(-50%,0)
     z-index: 1
     bottom: 95px
+    padding: 0 20px
+  .btn-calc
+    display: none
 
 h1
   width: 100%
@@ -605,6 +619,7 @@ h1
     bottom: 33px
     max-width: 1140px
     width: 100%
+    padding: 0 20px
 
 .best-offers__content
   padding: 0 56px 0 0
@@ -830,8 +845,6 @@ h1
   margin: 23px auto 0
   li
     margin: 0 0 10px
-    &:last-child
-      margin: 0
     a
       margin: 0 auto
       font-size: 19px
@@ -1467,7 +1480,7 @@ footer
   position: fixed
   z-index: 5
   right: 2vw
-  top: 50%
+  top: calc(50% + 65px)
   transform: translate(0,-50%)
   font-size: 14px
   font-weight: 800
@@ -1571,6 +1584,7 @@ footer
   background: $accent
 
 .radio-img
+  max-width: 212px
   width: 100%
   height: 153px
   overflow: hidden
@@ -1582,6 +1596,7 @@ footer
   margin: 35px auto 0
   width: 100%
   @include display-center
+  justify-content: space-around
   .slick-arrow
     width: 100%
     max-width: 310px
@@ -1598,8 +1613,7 @@ footer
     &:hover
       background-image: linear-gradient(to top, #ffd044, #ff8d07)
       box-shadow: 0 -3px 0 0 #fbb700
-  .slick-prev
-    margin: 0 20px 0 0
+
   .slick-disabled
     display: none !important
 
@@ -1623,6 +1637,7 @@ footer
     @include display-between
     li
       width: 33%
+
 
 
 //modal
@@ -1697,6 +1712,77 @@ footer
   .description-title
     max-width: 320px
     margin: 0 auto
+
+.mobile-menu
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  max-width: 280px
+  background: #fff
+  z-index: 4
+  box-shadow: 0 0 34.8px 5.2px rgba(115, 115, 115, 0.28)
+  padding: 30px 20px
+  height: 100%
+  overflow-y: auto
+  .logo
+    margin: 0 auto 30px
+  .menu
+    li
+      width: 100%
+      text-align: center
+      margin: 0 0 10px
+  .header-box
+    margin: 30px 0 0
+
+.btn-close
+  margin: 0 0 20px auto
+  width: 20px
+  height: 20px
+  svg
+    fill: $accent
+
+.btn-burger
+  width: 30px
+  display: none
+  span
+    display: block
+    width: 100%
+    height: 2px
+    margin: 0 0 6px
+    background: #000
+    &:last-child
+      margin: 0
+      
+.select-tab
+  background-image: linear-gradient(to top, #ffc600, #ffa801)
+  border: none
+  color: #fff
+  padding: 0 20px
+  font-size: 16px
+  font-weight: bold
+  border-radius: 10px 10px 0 0
+  height: 50px
+  width: 100%
+
+.select-label
+  position: relative
+  width: 100%
+  display: none
+  margin: 0 auto
+  &:before
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    top: 50%
+    right: 19px
+    transform: translate(0,-50%)
+    border-left: 7px solid transparent
+    border-right: 7px solid transparent
+    border-top: 12px solid #fff
+
 
 
 @import "media"
