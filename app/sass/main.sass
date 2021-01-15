@@ -363,10 +363,22 @@ header
 
 
 //main-slider
+main
+  position: relative
+  h1
+    position: absolute
+    top: 33px
+    left: 50%
+    transform: translate(-50%,0)
+    max-width: 1170px
+    padding: 0 15px
+    width: 100%
+    z-index: 1
+
 .main-slider
   background: url("../img/slide1.jpg") no-repeat center top
     size: cover
-  padding: 33px 0 95px
+  padding: 128px 0 95px
   .slick-dots
     max-width: 1140px
     left: 50%
