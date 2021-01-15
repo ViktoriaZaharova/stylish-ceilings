@@ -271,6 +271,8 @@ $('.btn-close').click(function (e) {
 	$('.mobile-menu').fadeOut();
 });
 
+
+
 // mail ajax
 $(".form-1").submit(function () {
 
@@ -282,32 +284,45 @@ $(".form-1").submit(function () {
 		success: function (data) {
 			$(this).find("input").val("");
 
-			$('.modal__div').css('display', 'none').animate({
-				opacity: 0,
-				top: '45%'
-			});
-
-
-			$('.overlay').fadeIn();
-			$('#thanks__modal').css('display', 'flex')
-				.animate({
-					opacity: 1,
-					top: '50%'
-				}, 200);
-
-			setTimeout(() => {
-				window.location = '../document.zip';
-			}, 2000);
-
-
-			setTimeout(function () {
-				$("#thanks__modal").css('display', 'none').animate({
+			$('.modal__div').animate({
 					opacity: 0,
 					top: '45%'
+				}, 200,
+				function () {
+					$(this).css('display', 'none');
+					$('.overlay').fadeOut(400);
+				}
+			);
+
+			$('.overlay').fadeIn(400,
+				function () {
+					$('#thanks__modal')
+						.css('display', 'flex')
+						.animate({
+							opacity: 1,
+							top: '50%'
+						}, 200);
 				});
-				$('.overlay').fadeOut(400);
-			}, 4000);
+
+
 			$(".form-1").trigger("reset");
+
+			setTimeout(() => {
+				window.location = '/document.zip';
+			}, 1000);
+
+			setTimeout(function () {
+				$("#thanks__modal")
+					.animate({
+							opacity: 0,
+							top: '45%'
+						}, 200,
+						function () {
+							$(this).css('display', 'none');
+							$('.overlay').fadeOut(400);
+						}
+					);
+			}, 4000);
 		}
 	});
 	return false;
@@ -323,27 +338,37 @@ $(".form-2").submit(function () {
 		success: function (data) {
 			$(this).find("input").val("");
 
-			$('.modal__div').css('display', 'none').animate({
-				opacity: 0,
-				top: '45%'
-			});
-
-			$('.overlay').fadeIn();
-			$('#thanks__modal').css('display', 'flex')
+			$('.modal__div')
+				.css('display', 'none')
 				.animate({
 					opacity: 1,
 					top: '50%'
 				}, 200);
 
+			$('.overlay').fadeIn(400,
+				function () {
+					$('#thanks__modal')
+						.css('display', 'flex')
+						.animate({
+							opacity: 1,
+							top: '50%'
+						}, 200);
+				});
+
+			$(".form-2").trigger("reset");
 
 			setTimeout(function () {
-				$("#thanks__modal").css('display', 'none').animate({
-					opacity: 0,
-					top: '45%'
-				});
-				$('.overlay').fadeOut(400);
+				$("#thanks__modal")
+					.animate({
+							opacity: 0,
+							top: '45%'
+						}, 200,
+						function () {
+							$(this).css('display', 'none');
+							$('.overlay').fadeOut(400);
+						}
+					);
 			}, 4000);
-			$(".form-2").trigger("reset");
 		}
 	});
 	return false;
@@ -359,32 +384,44 @@ $(".form-quiz").submit(function () {
 		success: function (data) {
 			$(this).find("input").val("");
 
-			$('.modal__div').css('display', 'none').animate({
-				opacity: 0,
-				top: '45%'
-			});
-
-			$('.overlay').fadeIn();
-
-			$('#thanks__modal').css('display', 'flex')
+			$('.modal__div')
+				.css('display', 'none')
 				.animate({
 					opacity: 1,
 					top: '50%'
 				}, 200);
 
-			setTimeout(function () {
-				$("#thanks__modal").css('display', 'none').animate({
-					opacity: 0,
-					top: '45%'
+			$('.overlay').fadeIn(400,
+				function () {
+					$('#thanks__modal')
+						.css('display', 'flex')
+						.animate({
+							opacity: 1,
+							top: '50%'
+						}, 200);
 				});
-				$('.overlay').fadeOut(400);
-			}, 4000);
 
 			$(".form-quiz").trigger("reset");
+
+			setTimeout(function () {
+				$("#thanks__modal")
+					.animate({
+							opacity: 0,
+							top: '45%'
+						}, 200,
+						function () {
+							$(this).css('display', 'none');
+							$('.overlay').fadeOut(400);
+						}
+					);
+			}, 4000);
+
 		}
 	});
 	return false;
 });
+
+
 
 // модальные окна (несколько)
 $(function () {
@@ -444,3 +481,4 @@ $(document).on('click', function (e) {
 		);
 	}
 });
+
