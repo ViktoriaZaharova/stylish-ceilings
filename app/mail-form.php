@@ -1,7 +1,7 @@
 <?php
 header("Content-type: text/html;charset=utf-8");
 
-$recepient = "test@gmail.com"; // введите свой email
+$recepient = "cpdninfo@gmail.com"; // введите свой email
 $sitename = "Стильные потолки";
 
 $phone = trim($_POST["phone"]);

@@ -184,6 +184,15 @@ $(function(){
 	$(".twentytwenty-container").twentytwenty();
 });
 
+// fixed header
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 150) {
+		$('.header-bottom').addClass('fixed');
+	} else {
+		$('.header-bottom').removeClass('fixed');
+	}
+});
+
 
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
@@ -194,7 +203,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
 	$('.product-slider').slick('setPosition');
 });
 
-$('.select-tab').change(function() {
+$('.select-tab').on("change", function() {
 	let value = $(this).find('option:selected').val();
 
 	$('div[id^="tab"]').removeClass('active');
@@ -273,7 +282,13 @@ $(".form-1").submit(function () {
 		success: function (data) {
 			$(this).find("input").val("");
 
+			$('.modal__div').css('display', 'none').animate({
+				opacity: 0,
+				top: '45%'
+			});
 
+
+			$('.overlay').fadeIn();
 			$('#thanks__modal').css('display', 'flex')
 				.animate({
 					opacity: 1,
@@ -281,8 +296,8 @@ $(".form-1").submit(function () {
 				}, 200);
 
 			setTimeout(() => {
-				window.location = '../document.pdf';
-			}, 1000);
+				window.location = '../document.zip';
+			}, 2000);
 
 
 			setTimeout(function () {
@@ -291,8 +306,8 @@ $(".form-1").submit(function () {
 					top: '45%'
 				});
 				$('.overlay').fadeOut(400);
-			}, 1000);
-			$(".form").trigger("reset");
+			}, 4000);
+			$(".form-1").trigger("reset");
 		}
 	});
 	return false;
@@ -308,7 +323,12 @@ $(".form-2").submit(function () {
 		success: function (data) {
 			$(this).find("input").val("");
 
+			$('.modal__div').css('display', 'none').animate({
+				opacity: 0,
+				top: '45%'
+			});
 
+			$('.overlay').fadeIn();
 			$('#thanks__modal').css('display', 'flex')
 				.animate({
 					opacity: 1,
@@ -322,8 +342,8 @@ $(".form-2").submit(function () {
 					top: '45%'
 				});
 				$('.overlay').fadeOut(400);
-			}, 1000);
-			$(".form").trigger("reset");
+			}, 4000);
+			$(".form-2").trigger("reset");
 		}
 	});
 	return false;
@@ -339,15 +359,18 @@ $(".form-quiz").submit(function () {
 		success: function (data) {
 			$(this).find("input").val("");
 
+			$('.modal__div').css('display', 'none').animate({
+				opacity: 0,
+				top: '45%'
+			});
+
+			$('.overlay').fadeIn();
+
 			$('#thanks__modal').css('display', 'flex')
 				.animate({
 					opacity: 1,
 					top: '50%'
 				}, 200);
-
-			setTimeout(() => {
-				window.location = '../document.zip';
-			}, 1000);
 
 			setTimeout(function () {
 				$("#thanks__modal").css('display', 'none').animate({
@@ -355,7 +378,7 @@ $(".form-quiz").submit(function () {
 					top: '45%'
 				});
 				$('.overlay').fadeOut(400);
-			}, 1000);
+			}, 4000);
 
 			$(".form-quiz").trigger("reset");
 		}
