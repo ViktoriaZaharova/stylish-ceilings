@@ -193,6 +193,18 @@ $(window).scroll(function () {
 	}
 });
 
+$(window).on('load resize', function() {
+	if ($(window).width() < 768) {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 150) {
+				$('.header-top').addClass('fixed-scroll');
+			} else {
+				$('.header-top').removeClass('fixed-scroll');
+			}
+		});
+	}
+});
+
 
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {

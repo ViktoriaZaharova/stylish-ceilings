@@ -2847,7 +2847,11 @@ footer {
     padding: 0 15px;
     max-width: 395px; }
   header {
-    position: fixed; } }
+    position: fixed; }
+  .fixed-scroll {
+    padding: 10px 0; }
+    .fixed-scroll .header-box-time {
+      display: none; } }
 
 @media only screen and (max-width: 650px) {
   .modal-body {
@@ -2891,7 +2895,7 @@ footer {
   .best-offers .description-title {
     margin: 0 0 29px; }
   .product-slider-box__content h3 {
-    display: none; }
+    margin: 0 0 20px; }
   .product-slider-box__content .list-checkbox {
     font-size: 14px; }
   .price-wrapper {
@@ -2942,7 +2946,7 @@ footer {
   .company-slider {
     margin: 30px 0 0; }
   .company {
-    margin: 0 0 50px; }
+    margin: 50px 0; }
   .callback-three .wrapper {
     padding: 0; }
   .callback-three {
@@ -2956,7 +2960,7 @@ footer {
   .seo-content {
     padding: 60px 0; }
     .seo-content .box-text {
-      height: 779px;
+      height: 550px;
       font-size: 14px; }
     .seo-content .box-open {
       height: auto; }
@@ -2969,14 +2973,16 @@ footer {
     -webkit-box-ordinal-group: -1;
         -ms-flex-order: -2;
             order: -2; }
-  footer .logo {
-    margin: 0 auto;
-    max-width: 120px; }
-  footer .list-social {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 30px 0 20px; }
+  footer {
+    padding: 0 0 65px; }
+    footer .logo {
+      margin: 0 auto;
+      max-width: 120px; }
+    footer .list-social {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 30px 0 20px; }
   .links-politic {
     display: none; }
   .footer-menu-last {
