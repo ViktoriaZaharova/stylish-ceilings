@@ -3036,7 +3036,13 @@ footer {
       .hero-widget__btn:hover .hero-widget__btn-text {
         display: none; }
   .main-slider {
-    padding: 200px 0 108px; } }
+    padding: 200px 0 108px; }
+  .btn-toggle {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .trigger {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); } }
 
 @media only screen and (max-width: 480px) {
   .main-slider {
